@@ -1,9 +1,9 @@
 import './App.css'
-import { Pokemon } from './Components/pokemon.jsx'
+import { FetchPokemonAPI } from './Components/pokemon.jsx'
 
 function App() {
   return<>
-      <Pokemon />
+      <FetchPokemonAPI />
   </>
 }
 
