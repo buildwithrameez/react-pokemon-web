@@ -1,5 +1,4 @@
-import './App.css'
-import { FetchPokemonAPI } from './Components/pokemon.jsx'
+import { FetchPokemonAPI } from './Components/pokemon'
 
 function App() {
   return<>
