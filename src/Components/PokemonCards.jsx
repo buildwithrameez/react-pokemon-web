@@ -15,34 +15,44 @@ export const PokemonCards = ({pokemonData}) => {
             currType.type.name).join(', ')}</p>
        </div>
 
-       <div className="grid-three-cols"> 
-        <p className="pokemon-info">
-           <span>Height:</span>{pokemonData.height}
-        </p>
+    <div className="grid-three-cols">
 
-        <p className="pokemon-info">
-           <span>Weight:</span>{pokemonData.weight}
-        </p>
+  <p className="pokemon-info">
+    <strong>{pokemonData.height}</strong>
+    <span>Height</span>
+   
+  </p>
 
-        <p className="pokemon-info">
-            <span>Speed:</span>{pokemonData.stats[5].base_stat}
-        </p>
+  <p className="pokemon-info">
+    <strong>{pokemonData.weight}</strong>
+    <span>Weight</span>
+  </p>
 
-        <p className="pokemon-info">
-            {pokemonData.base_experience}
-            <span>Experience:</span>
-        </p>
+  <p className="pokemon-info">
+    <strong>{pokemonData.stats[5].base_stat}</strong>
+    <span>Speed</span>
+  </p>
 
-        <p className="pokemon-info">
-            {pokemonData.stats[1].base_stat}
-            <span>Attack:</span>
-        </p>
+  <p className="pokemon-info">
+     <strong>{pokemonData.base_experience}</strong>
+    <span>Experience</span>
+  </p>
 
-        <p className="pokemon-info">
-            {pokemonData.abilities.map((abilitiesInfo) => abilitiesInfo.ability.name).slice(0,1).join(', ')}
-            <span>Abilities:</span>
-        </p>
+  <p className="pokemon-info">
+    <strong>{pokemonData.stats[1].base_stat}</strong>
+    <span>Attack</span>
+  </p>
 
-       </div>
+  <p className="pokemon-info">
+     <strong>
+      {pokemonData.abilities
+        .map((abilitiesInfo) => abilitiesInfo.ability.name)
+        .slice(0, 1)
+        .join(", ")}
+    </strong>
+    <span>Abilities</span>
+  </p>
+
+</div>
   </li>
 }; 
